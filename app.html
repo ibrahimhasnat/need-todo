@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Need Todo</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            width: 400px;
+            padding: 7px;
+        }
+        input, button {
+            border: 0;
+        }
+        .todo-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #add-todo {
+            border-bottom: 2px solid #DDD;
+            padding: 5px;
+            width: 85%;
+            margin: auto;
+            display: block;
+            transition: .5s;
+        }
+        #add-todo:focus {
+            border-bottom: 2px solid #0097A7;
+            outline-color: transparent;
+        }
+        #collections {
+            width: 90%;
+            margin: auto;
+            list-style: none;
+        }
+        .collection-item {
+            padding: 7px 10px;
+            border: 1px solid #DDD;
+            margin-bottom: 5px;
+            position: relative;
+            border-radius: 3px;
+        }
+        #todo, #clear-todos {
+            padding: 7px 10px;
+            background-color: #0097A7;
+            font-family: 'Ubuntu', sans-serif;
+            color: #FFF;
+            display: block;
+            margin: 10px auto;
+            border-radius: 3px;
+        }
+        #clear-todos {
+            background-color: #212121;
+            margin-bottom: 0;
+        }
+        .empty-todos {
+            text-align: center;
+        }
+        .remove-todo::after {
+            position: absolute;
+            content: "❌";
+            right: 20px;
+            top: 5px;
+            width: 7px;
+            height: 7px;
+        }
+    </style>
+
+</head>
+<body>
+    
+        <div class="todo-header">
+            <h4>Need Todo</h4>
+        </div>
+
+        <div class="todo-body">
+
+            <form id="form-todo">
+                <input type="text" placeholder="Add New Todo" id="add-todo">
+                <input type="submit" value="Add Todo" id="todo">
+            </form>
+            <ul id="collections"></ul>
+
+            <button id="clear-todos">Clear Todos</button>
+
+        </div>
+
+        <script src="app.js"></script>
+</body>
+</html>
